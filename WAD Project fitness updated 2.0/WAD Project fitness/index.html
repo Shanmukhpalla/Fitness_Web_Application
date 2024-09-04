@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Create responsive Website using html ,Css &JS </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>
+<!------- navigation bar -------->
+
+<div class="navbar">
+    <a href="#" class ="logo">F<b>A</b>.</a>
+    <div class="toggle" onclick="navToggle();"></div>
+    <ol>
+        <li><a href="#home" onclick="navToggle();">home</a></li>
+        <li><a href="#about" onclick="navToggle();">about</a></li>
+        <li><a href="#workout" onclick="navToggle();">workout</a></li>
+        <li><a href="#diet" onclick="navToggle();">diet</a></li>
+        <li><a href="#trainers" onclick="navToggle();">trainers</a></li>
+        <li><a href="#contact" onclick="navToggle();">contact</a></li>
+        <li><a href="login.html" onclick="navToggle();">login</a></li>
+    </ol>
+</div>
+
+<!-- ---------------Home Section ---------------- -->
+
+<section id="home" class="home view">
+    <div class="highlights">
+        <h3>feel the power with</h3>
+        <h1><b>FIT</b>APEX</h1><br>
+        <p class="tagline">
+            "Welcome to our fitness website, where we're dedicated to helping you achieve your health and wellness goals. Our expert guidance, personalized plans, and a supportive community are here to empower you on your fitness journey. Join us and unlock your full potential for a healthier, happier life."   
+        </p>
+        <button class="join" > <a href="login.html" onclick="navToggle();">join now</a></button>
+    </div>
+    <div class="banner"></div>
+</section>
+
+<!-- ---------------About Section ---------------- -->
+<section id="about" class="about view">
+    <div class="main">
+        <h2><span>A</span>bout Us</h2>
+        <h6>Learn about our mission, values, and commitment to your well-being as we strive to be your trusted partner on your path to a healthier and happier life</h6>
+    </div>
+    <div class="content">
+        <div class="cols">
+            <p>Welcome to our 'About Us' section, where we invite you to discover the heart of our organization. Our mission is to empower individuals on their journey to a healthier and happier life, and our core values of integrity, passion, and excellence drive everything we do. With a team of dedicated professionals, we're committed to providing top-notch fitness and wellness solutions tailored to your unique needs. We believe in fostering a supportive community and making a positive impact on your well-being. Thank you for choosing us as your trusted partner in achieving your health and fitness goals</p>
+            <a href="#">more</a>
+        </div>
+        <div class="cols">
+            <div class="box">
+                <img src="about.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>    
+
+
+<!-- ---------------Workout Section ---------------- -->
+
+<section id="workout" class="workout view"> 
+    <div class="main">
+    <h2><span>W</span>orkout</h2>
+    <h6>Passion for Fitness, Dedication to You</h6>
+    </div>
+
+    <div class="content">
+        <div class="frame">
+            <div class="box">
+                <img src="chest image.jpg" alt="">
+            </div>
+            <div class="headline">
+        <div class="title">Chest</div>
+            </div>
+        <p>Build a powerful and well-defined chest with our targeted chest workouts.</p>
+        <a href="chest.html"  onclick="navToggle();">Go</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="legs.jpg" alt="">
+            </div>
+            <div class="headline">
+        <div class="title">Legs</div>
+          </div>
+        <p>Sculpt and strengthen your lower body with leg exercises that enhance both form and function.</p>
+        <a href="legshtml.html"  onclick="navToggle();">Go</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="arms.jpg" alt="">
+            </div>
+            <div class="headline">
+        <div class="title">Arms</div>
+    </div>
+        <p>"Get those toned, strong arms you've always wanted with our effective arm workouts."</p>
+        <a href="Armshtml.html"  onclick="navToggle();">Go</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="abs.jpg" alt="">
+            </div>
+            <div class="headline">
+        <div class="title">Abs</div>
+    </div>
+        <p>"Define your core and achieve a toned midsection with our comprehensive ab exercises."</p>
+        <a href="Abshtml.html"  onclick="navToggle();">Go</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="back.jpg" alt="">
+            </div>
+            <div class="headline">
+        <div class="title">Back</div>
+    </div>
+        <p>Strengthen your back muscles for better posture and overall upper body strength.</p>
+        <a href="backhtml.html"  onclick="navToggle();">Go</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="full body.jpg" alt="">
+            </div>
+            <div class="headline">
+        <div class="title">Full Body</div>
+    </div>
+        <p>Experience a complete transformation with our full-body workouts that target every major muscle group for total fitness.</p>
+        <a href="fullbody.html"  onclick="navToggle();">Go</a>
+        </div>
+    </div>
+</section>
+<!-- ---------------bmi Section ---------------- -->
+<section id="diet" class="diet view">
+    <div class="main">
+        <h2><span>B</span>MI<span> C</span>ALCULATOR</h2>
+        <h6>Select your diet based on body type you need to build from BMI calculation</h6>
+    </div>
+    
+    <div class="content">
+    
+        <div class="left-box">
+            <h1> Calculate</h1>
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" required>
+            <label for "height">Height (cm):</label>
+            <input type="number" id="height" required>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required>
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="bmiResult"></p>
+        </div>
+        <div class="right-box">
+            <h1>Result</h1>
+            <p id="bmiCategory"></p>
+            <p id="caloriesResult"></p>
+            <button class="diet-button"><a href="categories.html">DIET PLAN</a></button>
+        </div>
+    
+    </div>
+    
+    <script>
+        function calculateBMI() {
+            const age = parseFloat(document.getElementById("age").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const weight = parseFloat(document.getElementById("weight").value);
+
+            if (!isNaN(age) && !isNaN(height) && !isNaN(weight)) {
+                const heightInMeters = height / 100;
+                const bmi = weight / (heightInMeters * heightInMeters);
+
+                let bmiCategory = "";
+
+                if (bmi < 18.5) {
+                    bmiCategory = "Underweight,the person need to bulk";
+                } else if (bmi >= 18.5 && bmi < 24.9) {
+                    bmiCategory = "Healthy Weight,the person can try for athletic body shape";
+                } else {
+                    bmiCategory = "Overweight-the person need to cut into shape";
+                }
+
+                document.getElementById("bmiResult").textContent = `Your BMI: ${bmi.toFixed(2)}`;
+                document.getElementById("bmiCategory").textContent = `Category: ${bmiCategory}`;
+
+                const calorieNeeds = 10 * weight + 6.25 * height - 5 * age + 5;
+
+                document.getElementById("caloriesResult").textContent = `Estimated Daily Calorie Needs: ${calorieNeeds.toFixed(0)} calories`;
+
+                // Store the calculated calorie needs in localStorage
+                localStorage.setItem('calories', calorieNeeds);
+            } else {
+                alert("Please enter valid values for age, height, and weight.");
+            }
+        }
+    </script>
+</section>
+
+
+<!-- ---------------diet Section ---------------- -->
+<section id="trainers" class="trainers view">
+    <div class="main">
+        <h2><span>D</span>IET<span> P</span>LAN</h2>
+        <h6>select the body type</h6>
+    </div>
+
+    <div class="content">
+        <div class="frame">
+            <div class="box">
+                <img src="bulki.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">BULK</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <p>Discover the expertise of our fitness trainers who are dedicated to helping you achieve your health and fitness goals through personalized exercise and nutrition plans</p>
+            <a href="BULKHTML.html">Explore</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="leani.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">LEAN</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <p>Discover the expertise of our fitness trainers who are dedicated to helping you achieve your health and fitness goals through personalized exercise and nutrition plans</p>
+            <a href="leanhtml.html">Explore</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="cuti.png" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">CUT</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <p>Discover the expertise of our fitness trainers who are dedicated to helping you achieve your health and fitness goals through personalized exercise and nutrition plans</p>
+            <a href="cuthtml.html">Explore</a>
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="normali.png" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">NORMAL</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <p>Discover the expertise of our fitness trainers who are dedicated to helping you achieve your health and fitness goals through personalized exercise and nutrition plans</p>
+            <a href="normalhtml.html">Explore</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- ---------------Contact Section ---------------- -->
+<section id="contact" class="contact view">
+        <div class="main">
+        <h2><span>C</span>ontact</h2>
+        <h6>Get in touch with us today for any inquiries or assistance – we're here to help you on your journey to a healthier lifestyle.</h6>
+    </div>
+    
+    <div class="content">
+        <form>
+        <input type="text" placeholder="User">
+        <input type="email" placeholder="Email">
+        <textarea rows="5" placeholder="what's on your mind"></textarea>
+        <br>
+        <input type="submit" value="Send" class="btn">
+        </form>
+        <div class="bging"></div>
+    </div>
+    </section> 
+
+
+<!-- /* -------------- copyright ----------------- */ -->
+
+<section class="copyright">
+    &copy;copyright <a href="#">WadProject</a> 2023 | All Rights Reserved
+</section>
+
+<!-- /* -------------- javascript code here ----------------- */ -->
+<script>
+    window.addEventListener('scroll', function(){
+        const navbar = document.querySelector('.navbar'); 
+        navbar.classList.toggle("sticky", window.scrolly > 50);
+    });
+
+    const togglebar =document.querySelector('.toggle');
+    const menu = document.querySelector('ol');
+   
+    function navToggle(){
+        togglebar.classList.toggle("active"); 
+        menu.classList.toggle("active");
+    };
+</script>
+
+</body>
+
+
+</html>

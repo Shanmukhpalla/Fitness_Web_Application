@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://www.shutterstock.com/image-photo/black-stone-cooking-background-spices-260nw-1914852676.jpg");
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            max-width: 550px;
+            border: 2px solid black;
+        }
+        .menu-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            background-color: rgba(0, 123, 255, 0.7); /* Transparent blue background */
+            color: #fff;
+            border: 2px solid black;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu-button:hover {
+            background-color: rgba(0, 86, 179, 0.7); /* Transparent darker blue on hover */
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+        }
+        .selected-items {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            max-width: 550px;
+            border: 2px solid black;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHOOSE A MENU</h1>
+        <button class="menu-button"><a href="breakfast.html"><font color = white>BREAKFAST</a></button></font>
+        <button class="menu-button"><a href="lunch.html"><font color = white>LUNCH</a></button></font>
+        <button class="menu-button"><a href="dinner.html"><font color = white>DINNER</a></button></font>
+        <button class="menu-button"><a href="snacks.html"><font color = white>SNACKS</a></button></font>
+        <button class="menu-button"><a href="fruits.html"><font color = white>FRUITS</a></button></font>
+        <button class="menu-button"><a href="drinks.html"><font color = white>DRINKS</a></button></font>
+        <button class="menu-button" id="display-button">Display Selected</button>
+        <div class="selected-items" id="selected-items-box">
+            <h2>Selected Items</h2>
+            <ul id="selected-items-list">
+                <!-- Selected items will be displayed here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the selected items box
+        function displaySelectedItemsBox() {
+            const selectedItemsBox = document.getElementById("selected-items-box");
+            selectedItemsBox.style.display = "block";
+        }
+
+        // Function to display selected items from localStorage
+        function displaySelectedItems() {
+            const selectedItemsList = document.getElementById("selected-items-list");
+
+            // Retrieve selected items from localStorage
+            const selectedItems = JSON.parse(localStorage.getItem('selectedItems'));
+
+            // Clear the previous list
+            selectedItemsList.innerHTML = "";
+
+            if (selectedItems) {
+                selectedItems.forEach(item => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = item.name;
+                    selectedItemsList.appendChild(listItem);
+                });
+            } else {
+                selectedItemsList.innerHTML = "No items selected.";
+            }
+
+            displaySelectedItemsBox();
+        }
+
+        // Attach the displaySelectedItems function to the Display Selected button
+        document.getElementById("display-button").addEventListener("click", displaySelectedItems);
+    </script>
+</body>
+</html>

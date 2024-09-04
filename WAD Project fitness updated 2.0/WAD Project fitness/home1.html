@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 30px;
+            background-color: rgba(0, 0, 0, 0);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 1200px;
+            height: 1500px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+            opacity: 1;
+            background-color: black;
+            position: relative;
+        }
+
+        .feature {
+            text-align: center;
+            margin: 0;
+            background-image: url("https://img.freepik.com/free-photo/buddha-bowl-dish-with-vegetables-legumes-top-view_1150-42589.jpg?w=2000");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 1200px;
+            height: 600px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .feature::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .feature h1 {
+            font-size: 56px;
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            position: relative;
+            z-index: 1;
+        }
+       a
+    {
+text-decoration:none;
+     }
+     
+
+
+        .start-button {
+            background-color: #007bff;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+           
+           
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .start-button:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+
+        .diet-plan-text {
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        footer {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="feature">
+        <header>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+          
+        </header>
+        <font type="impact"><h1>YOUR PATH TO A HEALTHIER </h1></font>
+        <font type="impact"><h1> LIFESTYLE STARTS HERE.</h1></font>
+        <div class="diet-plan-text">
+            <h4>MAKE YOUR DIET PLAN</h4>
+        </div>
+        <button class="start-button"><a href="bmi.html"><font color = white>START</font></a></button>
+    </div>
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>
+

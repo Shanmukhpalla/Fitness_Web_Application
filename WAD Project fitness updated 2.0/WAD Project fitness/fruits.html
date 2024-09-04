@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 1100px;
+            height: 600px;
+        }
+        h1 {
+            font-size: 28px;
+            color: black;
+        }
+        .menu-item {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            position: relative;
+            perspective: 1000px;
+        }
+        .menu-item img {
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 10px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .menu-item.selected img {
+            width: 215px;
+            height: 165px;
+            transform: scale(1.05);
+            border-color: red;
+          
+        }
+        .menu-item .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            transform: rotateY(180deg);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .menu-item:hover .content, .menu-item.selected .content {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+        .calories-text {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .submit-button {
+            margin-top: 20px;
+        }
+        .submit-button button {
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+           
+        }
+        .submit-button button:hover {
+            background-color: #0056b3;
+        }
+	a{
+text-decoration:none;
+	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FRUITS MENU</h1>
+        <p class="calories-text">Calories Left: <span id="caloriesLeft">1800</span> calories</p>
+                 <div class="menu-item" onclick="toggleSelection(this,60)">
+            <img src="https://media.istockphoto.com/id/185284489/photo/orange.jpg?b=1&s=612x612&w=0&k=20&c=P6dfluS7PhPHB4BpgWlNmsFOUyUuD8wQMPGOtnsBln4=" alt="orange">
+            <div class="content">
+                <p>Orange</p>
+		<p>Calories:60</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,90)">
+            <img src="https://c4.wallpaperflare.com/wallpaper/567/218/528/apples-fruit-cut-leaf-wallpaper-preview.jpg" alt="apple">
+            <div class="content">
+                <p>Apple</p>
+		<p>Calories:90</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,46)">
+            <img src="https://thumbs.dreamstime.com/b/whole-slices-watermelon-fruit-isolated-white-background-144634249.jpg" alt="watermelon">
+            <div class="content">
+                <p>Watermelon</p>
+		<p>Calories:46</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,90)">
+            <img src="https://media.istockphoto.com/id/636739634/photo/banana.jpg?s=612x612&w=0&k=20&c=pO0985tQi1LpWRlWqpRvbab8S5yxgnEOVcs5CHIlcDE=" alt="banana">
+            <div class="content">
+                <p>Banana</p>
+		<p>Calories:90</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,104)">
+            <img src="https://media.istockphoto.com/id/172304886/photo/bunch-of-green-grapes-laying.webp?b=1&s=170667a&w=0&k=20&c=4QqihK0xD6aNdx2_mDwbUgu_Fo6A_ZLfP5lBC8RTsT0=" alt="grapes">
+            <div class="content">
+                <p>Grapes</p>
+		<p>Calories:104</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,234)">
+            <img src="https://t3.ftcdn.net/jpg/00/26/76/50/360_F_26765053_pRDiXJPktT6uhzr2YjfqiVP3PTg8wEgc.jpg" alt="pomegranate">
+            <div class="content">
+                <p>Pomegranate</p>
+		<p>Calories:234</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,82)">
+            <img src="https://wallpapercave.com/wp/wp3117217.jpg" alt="pine-apple">
+            <div class="content">
+                <p>Pine-apple</p>
+		<p>Calories:82</p>
+            </div>
+        </div>
+        <div class="menu-item" onclick="toggleSelection(this,70)">
+            <img src="https://livekarts.in/wp-content/uploads/2021/05/mango.jpg" alt="mango">
+            <div class="content">
+                <p>Mango</p>
+		<p>Calories:70</p>
+            </div>
+            </div>
+        <div class="submit-button">
+            <button type="button" onclick="submitMenu()">Submit</button>
+        </div>
+       <div class="submit-button">
+            <button><a href ="categories.html"><font color=white>Back</font></a></button>
+        </div>
+
+    </div>
+       
+   
+
+    <script>
+        // Check if there are stored calories and update the displayed calories
+        const storedCalories = localStorage.getItem('calories');
+        if (storedCalories !== null) {
+            document.getElementById('caloriesLeft').textContent = storedCalories;
+        }
+
+        // Function to toggle the selection of a menu item
+        function toggleSelection(menuItem, calorieValue) {
+            const isSelected = menuItem.classList.contains("selected");
+            const caloriesElement = document.getElementById('caloriesLeft');
+            const currentCalories = parseInt(caloriesElement.textContent, 10);
+
+            if (isSelected) {
+                menuItem.classList.remove("selected");
+                updateCalories(calorieValue);
+            } else if (currentCalories >= calorieValue) {
+                menuItem.classList.add("selected");
+                updateCalories(-calorieValue);
+            }
+        }
+
+        // Function to update the displayed calories and store them
+        function updateCalories(calorieChange) {
+            const caloriesElement = document.getElementById('caloriesLeft');
+            let currentCalories = parseInt(caloriesElement.textContent, 10);
+            currentCalories += calorieChange;
+
+            if (currentCalories < 0) {
+                currentCalories = 0;
+            }
+
+            caloriesElement.textContent = currentCalories;
+            localStorage.setItem('calories', currentCalories);
+        }
+
+        // Function to handle menu submission (you can customize this)
+        function submitMenu() {
+            // You can customize this function for menu submission
+            // For this example, let's store the selected items in localStorage
+            const selectedItems = document.querySelectorAll(".menu-item.selected");
+            const itemsToStore = [];
+
+            selectedItems.forEach(item => {
+                itemsToStore.push({ name: item.querySelector("p").textContent });
+            });
+
+            localStorage.setItem('selectedItems', JSON.stringify(itemsToStore));
+            alert("Menu submitted!");
+        }
+    </script>
+</body>
+</html>
+

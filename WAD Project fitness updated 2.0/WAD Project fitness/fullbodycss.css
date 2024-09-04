@@ -1,0 +1,124 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url('bg7.gif');
+    background-size: cover;
+}
+
+nav {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    padding: 40px 150px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    z-index: 5;
+}
+
+.top-logo {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: green;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-size: 2.4em;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.box {
+    position: relative;
+    height: 600px;
+    width: 1200px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgbox{
+    position: relative;
+    height: 100%;
+    width: 100px;
+    border-radius: 25px;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+    transition: 0.70s;
+     background-color:white;
+}
+
+.imgbox .logo {
+    position: absolute;
+    bottom: 20px;
+    height: 70px;
+    width: 70px;
+    background: black;
+  border-radius: 100%;
+    border: 3px solid red;
+}
+ 
+.imgbox:hover {
+    width: 770px;
+    height: 100%;
+    border: 5px solid green;
+}
+
+.img1 {
+    background: url('f1.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.img2 {
+    background: url('f2.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.img3 {
+    background: url('f3.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.img4 {
+    background: url('f4.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.img5 {
+    background: url('f5.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.img6 {
+    background: url('f6.gif');
+    background-position: center;
+    background-size: cover;
+}
